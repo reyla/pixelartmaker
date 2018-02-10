@@ -5,22 +5,19 @@
 
 
 function makeGrid() {
-  const height = $('#inputHeight').val();
-  const width = $('#inputWidth').val();
-  let grid = $('#pixelCanvas');
+  var height = $('#inputHeight').val();
+  var width = $('#inputWidth').val();
+  var table = document.getElementById('pixelCanvas');
   // clear any existing grid cells
-  grid.children().remove();
-  // function below adds table cells and rows to create the grid
+  $('#pixelCanvas').children().remove();
+  // function below adds table rows and cells to create the grid
   for(let x = 0; x < height; ++x) {
-    grid.append('<tr>');
+    var row = table.insertRow(0);
     for(let i = 0; i < width; ++i) {
-    $('tr:last').append('<td width="10">&nbsp</td>');
+    var cell = row.insertCell(0);
     }
-    grid.append('</tr');
   }
-  // adds a border on every cell of table
-  $('#pixelCanvas').children().css('border', '1px solid black');
-};
+}
 
 
 // submit button runs the grid build
