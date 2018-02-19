@@ -19,16 +19,16 @@ function makeGrid() {
   }
 }
 
-
-// submit button runs the grid build
-$('#sizePicker').submit(function(event) {
-  event.preventDefault();
-  makeGrid();
-});
-
-
-// grid cell changes to selected color when user clicks on it
-$('#pixelCanvas').on('click', 'td', function (){
-  const color = $('#colorPicker').val();
-  $(this).css('background-color', color);
-});
+//make sure document is fully loaded
+$(function(){
+  // submit button runs the grid build
+  $('#sizePicker').submit(function(event) {
+    event.preventDefault();
+    makeGrid();
+  });
+  // grid cell changes to selected color when user clicks on it
+  $('#pixelCanvas').on('click', 'td', function (){
+    const color = $('#colorPicker').val();
+    $(this).css('background-color', color);
+  });
+})
