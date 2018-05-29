@@ -3,16 +3,16 @@
 * @description builds table of cells based on user input for height and width
 */
 function makeGrid() {
-  var height = $('#inputHeight').val();
-  var width = $('#inputWidth').val();
-  var table = document.getElementById('pixelCanvas');
+  const height = $('#inputHeight').val();
+  const width = $('#inputWidth').val();
+  const table = document.getElementById('pixelCanvas');
   // clear any existing grid cells
   $('#pixelCanvas').children().remove();
   // this loop adds table rows and cells to create the grid
   for (let x = 0; x < height; ++x) {
-    var row = table.insertRow(0);
+    const row = table.insertRow(0);
     for (let i = 0; i < width; ++i) {
-    var cell = row.insertCell(0);
+      const cell = row.insertCell(0);
     }
   }
 }
