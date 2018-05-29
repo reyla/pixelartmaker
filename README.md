@@ -1,2 +1,2 @@
 # pixelartmaker
-Final project for Grow with Google Challenge Scholarship: Front-End Web Dev course. Builds a page where user can choose height, width, and color to create a grid. Cells of the grid can be clicked on to change to selected color.
+A simple HTML page where a user can choose height and width to create a grid, and then choose a color to apply to cells as they desire. The user will click on cells to toggle the color change.
